@@ -1,0 +1,12 @@
+{
+  "name": "newYorkTimeApp",
+  "displayName": "newYorkTimeApp",
+  "expo": {
+    "name": "newYorkTimeApp",
+    "slug": "newYorkTimeApp",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
