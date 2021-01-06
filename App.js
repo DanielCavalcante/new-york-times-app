@@ -10,27 +10,23 @@ import { NoticeProvider } from "./src/contexts/notices";
 const Stack = createStackNavigator();
 
 export default () => {
-  useEffect(() => {}, []);
-
   return (
-    <>
-      <NoticeProvider>
-        <StatusBar barStyle="dark-content" />
-        <NavigationContainer>
-          <Stack.Navigator>
-            <Stack.Screen
-              options={{ headerShown: false }}
-              name="Home"
-              component={Home}
-            ></Stack.Screen>
-            <Stack.Screen
-              options={{ headerShown: false }}
-              name="Detail"
-              component={Detail}
-            ></Stack.Screen>
-          </Stack.Navigator>
-        </NavigationContainer>
-      </NoticeProvider>
-    </>
+    <NoticeProvider>
+      <StatusBar barStyle="dark-content" />
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen
+            options={{ headerShown: false }}
+            name="Home"
+            component={Home}
+          ></Stack.Screen>
+          <Stack.Screen
+            options={{ headerShown: false }}
+            name="Detail"
+            component={Detail}
+          ></Stack.Screen>
+        </Stack.Navigator>
+      </NavigationContainer>
+    </NoticeProvider>
   );
 };
