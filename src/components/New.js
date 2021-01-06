@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { StyleSheet, Text, View, TouchableOpacity, Image } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import moment from "moment";
 
-export default function New({ navigation, data }) {
+export default function New({ data }) {
+  const navigation = useNavigation();
   const [title, setTitle] = useState(data.headline.main);
   const [resume, setResume] = useState(data.snippet);
   const [publicationData, setPublicationData] = useState(

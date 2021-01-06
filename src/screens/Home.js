@@ -3,13 +3,13 @@ import { StyleSheet, Text, View, SafeAreaView } from "react-native";
 import News from "../components/News";
 import Menu from "../components/Menu";
 
-export default function Home({ navigation }) {
+export default function Home() {
   return (
     <>
       <View style={styles.container}>
         <SafeAreaView>
           <Text style={styles.text}>Articles</Text>
-          <News navigation={navigation} />
+          <News />
         </SafeAreaView>
       </View>
       <Menu />
