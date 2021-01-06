@@ -17,9 +17,12 @@ export default function New({ navigation, data }) {
         <Image
           style={styles.image}
           source={{
-            uri: `http://www.nytimes.com/${data.multimedia[0].url}`,
+            uri: `http://www.nytimes.com/${
+              data.multimedia[0] ? data.multimedia[0].url : ``
+            }`,
           }}
         />
+
         <Text style={styles.title}>{title}</Text>
         <Text style={styles.resume}>{resume}</Text>
         <Text style={styles.publicationDate}>{publicationData}</Text>
